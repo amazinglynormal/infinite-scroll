@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  height: 3vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-card {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+  max-width: 375px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.sprite {
+  height: 130px;
+  width: 130px;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.card-heading {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 1;
+  display: flex;
+  align-items: center;
+}
+
+.card-types {
+  grid-column: 3 / span 3;
+  grid-row: 2 / span 1;
+}
+
+.card-types-header {
+  margin-bottom: 0.6rem;
+}
+
+.card-types-text {
+  text-overflow: ellipsis;
+}
+
+.card-stats {
+  grid-column: 1 / span 5;
+  grid-row: 3 / span 2;
+}
+
+.card-stats-header {
+  margin-bottom: 0.6rem;
+}
+
+.card-stats-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-stats-option {
+  font-size: 0.95rem;
+  margin: 0.2rem 0.5rem;
+  width: 40%;
+}
+
+.loader {
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
